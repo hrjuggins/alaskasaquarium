@@ -148,6 +148,7 @@ h1 {
   display: flex;
   height: 100%;
   width: 100%;
+  left: 350px;
 }
 
 .submit-name input {
@@ -181,14 +182,15 @@ h1 {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
+  left: 350px;
 }
 
 .hide {
-  top: 45px;
+  left: -350px;
 }
 
 .show {
-  top: 0;
+  left: 0;
 }
 
 .read-the-docs {

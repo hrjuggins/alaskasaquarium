@@ -13,7 +13,6 @@ function onAdd(element: HTMLButtonElement) {
       thanks?.classList.add('show');
     } else if (isExit) {
       inputName?.classList.remove('show');
-      inputName?.classList.add('hide');
       addButton?.classList.add('show');
     } else {
       element.classList.remove('show');
@@ -57,12 +56,12 @@ const renderFishes: string[] | string = fishes.map(
         <p>Cool fact - ${fish.fact}</p>
         <div class="button-wrapper"> 
           <button class="add show">Add me to the tank</button>
-          <div  class="submit-name hide">
+          <div  class="submit-name">
             <input type="text" placeholder="Enter your name"></input>
             <button class="send">✅</button>
             <button class="exit">❌</button>
           </div>
-          <p class="thanks hide">Thank you!</p>
+          <p class="thanks">Thank you!</p>
         </div>
       </div>
     </div>`
