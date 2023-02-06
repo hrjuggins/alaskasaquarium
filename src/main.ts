@@ -1,6 +1,6 @@
 import './style.css';
 
-function onAdd(element: HTMLButonElement) {
+function onAdd(element: HTMLButtonElement) {
   const inputName = document.querySelector('.submit-name');
   const addButton = document.querySelector('.add');
   const thanks = document.querySelector('.thanks');
@@ -48,7 +48,7 @@ const fishes = [
   },
 ];
 
-const renderFishes = fishes.map(
+const renderFishes: string[] | string = fishes.map(
   (fish) => `<div class="card">
     <img src="${fish.image}" />
       <div class="card-info">
@@ -82,7 +82,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `;
 
 const cards = document.querySelector<HTMLDivElement>('.cards');
-cards.innerHTML = renderFishes;
+if (cards) {
+  cards.innerHTML = `${renderFishes}`;
+}
 console.log(cards);
 
 onAdd(document.querySelector<HTMLButtonElement>('.add')!);
