@@ -74,8 +74,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h1>It's Alaska's<br/ > 1st birthday<br/> </h1>
     <img src="https://i.ibb.co/ZWY5MqS/Whats-App-Image-2023-02-05-at-8-04-50-PM.jpg" class="tank" alt="TypeScript logo" />
     <h1>and she needs help filling her fish tank!</h1></div>
-
+<div class="sub-intro"
  <h2>Take a look at the fish suitable for Alaska's aquarium and let us know which one you want to add!</h2>
+ </div>
     <div class="cards">
     </div>
   </div>
