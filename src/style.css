@@ -114,7 +114,7 @@ h1 {
 
 .card-info {
   padding: 0 2em;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 300px - 4em);
   position: relative;
 }
 
