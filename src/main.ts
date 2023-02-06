@@ -58,7 +58,7 @@ const renderFishes: string[] | string = fishes.map(
           <button class="add show">Add me to the tank</button>
        
           <form name="contact" method="POST" data-netlify="true" class="submit-name">
-            <input type="text" placeholder="Enter your name" name="name"></input>
+            <input type="text" placeholder="Enter your name" name="name" />
             <button class="send" type="submit">✅</button>
             <button class="exit">❌</button>
           </form>
