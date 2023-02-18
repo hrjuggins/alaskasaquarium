@@ -130,7 +130,7 @@ const renderFishOptions: string[] | string = fishes
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
    <div class="intro">
-    <h1>It's Alaska's<br/ > 1st birthday and she needs help filling her fish tank!</h1>
+    <h2>It's Alaska's<br/ > 1st birthday and she needs help filling her fish tank!</h2>
 
     <img src="https://i.ibb.co/ZWY5MqS/Whats-App-Image-2023-02-05-at-8-04-50-PM.jpg" class="tank" alt="TypeScript logo" />
 <div class="sub-intro"
@@ -161,7 +161,14 @@ const options = document.querySelector<HTMLDivElement>("#options");
 if (options) {
   options.innerHTML = `${renderFishOptions}`;
 }
-console.log(cards);
+const cardImages = document.querySelectorAll<HTMLDivElement>(".card_image");
+console.log(cardImages);
+
+for (let i = 0; i < cardImages.length; i++) {
+  cardImages[i].addEventListener("click", function () {
+    cardImages[i].classList.toggle("open_image");
+  });
+}
 
 onAdd(document.querySelector<HTMLButtonElement>(".add")!);
 onAdd(document.querySelector<HTMLButtonElement>(".exit")!);
