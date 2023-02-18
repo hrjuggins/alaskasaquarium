@@ -32,6 +32,11 @@ body {
   color: white;
 }
 
+.intro {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
 .intro,
 .sub-intro {
   display: flex;
@@ -39,8 +44,6 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
-  height: 100vh;
-  scroll-snap-align: start;
 }
 
 h1 {
@@ -53,7 +56,7 @@ h1 {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-  background-image: url('https://as2.ftcdn.net/v2/jpg/02/71/12/85/1000_F_271128500_9vmhdblZhKO0bKg4GKUSTTvopFARiYai.jpg');
+  background-image: url("https://as2.ftcdn.net/v2/jpg/02/71/12/85/1000_F_271128500_9vmhdblZhKO0bKg4GKUSTTvopFARiYai.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,7 +65,6 @@ h1 {
   background-blend-mode: multiply;
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(3rem);
   scroll-snap-type: y mandatory;
   position: relative;
@@ -70,7 +72,7 @@ h1 {
 
 .tank {
   width: 100%;
-  margin: 80px 0;
+  margin: 40px 0;
 }
 
 .loader {
@@ -87,84 +89,88 @@ h1 {
   }
 }
 
-.cards {
-  top: 0px;
+.cards-area {
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(3rem);
-  scroll-snap-type: y mandatory;
   position: relative;
-  margin-top: 80px;
-  display: inline-block;
+
   scroll-snap-align: start;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 75%;
+  overflow: scroll;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+  width: 42%;
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 29%;
+  }
 }
 
 .card {
-  height: 100vh;
-  display: inline-block;
-  scroll-snap-align: start;
-  background-color: coral;
-}
-
-.card img {
-  width: 100%;
-  height: 300px;
-}
-
-.card-info {
-  padding: 0 2em;
-  height: calc(100vh - 300px - 4em);
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   position: relative;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #ef8d9c 40%, #ffc39e 100%);
+}
+
+.card_image img {
+  width: 100%;
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 4.25rem;
+  font-weight: 400;
 }
 
 .button-wrapper {
   position: absolute;
-  height: 40px;
-  overflow: hidden;
-  max-width: 400px;
   margin: auto;
-  width: calc(100% - 4rem);
-  bottom: 4em;
-}
-
-.add {
-  height: 100%;
+  bottom: 0px;
   width: 100%;
-  border-radius: 8px;
-  padding: 0.6em 1.2em;
-}
-
-.add,
-.submit-name,
-.thanks {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 2s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .submit-name {
   display: flex;
-  height: 100%;
-  width: 100%;
-  left: 350px;
-}
-
-.submit-name input {
-  border: none;
-  flex: 1;
-  border-radius: 8px 0 0 8px;
-  text-indent: 0.6em;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  padding: 20px;
+  /* left: 550px; */
 }
 
 .submit-name input:focus {
   outline: none;
-}
-
-.submit-name button {
-  padding: 0 10px;
-  background-color: white;
 }
 
 .exit {
@@ -182,29 +188,25 @@ h1 {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  left: 350px;
-}
-
-.hide {
-  left: -350px;
-}
-
-.show {
-  left: 0;
-}
-
-.hidden {
-  display: none;
+  /* left: 550px; */
 }
 
 button,
-input {
-  border: 1px solid transparent;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+input,
+select {
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-weight: 400;
+  display: block;
   cursor: pointer;
-  transition: border-color 0.25s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 0.5rem;
+}
+button {
+  background-color: #ef8d9c;
+  color: white;
 }
 button:hover {
   border-color: #646cff;
