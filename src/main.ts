@@ -68,6 +68,11 @@ const fishes = [
       "https://www.cuaquatics.co.uk/wp-content/uploads/2022/06/galaxy3.jpg",
   },
   {
+    name: "Bunny Snail",
+    image:
+      "https://makemyhobby.com/image/cache/catalog/img_product/22-02A-007_c-550x550.jpg.webp",
+  },
+  {
     name: "Rummy Nose Tetra",
     image:
       "https://www.fishkeepingworld.com/wp-content/uploads/2019/03/The-Ultimate-Rummy-Nose-Tetra-Care-Guide-Breeding-Tank-Mates-and-More%E2%80%A6-Banner.jpg",
